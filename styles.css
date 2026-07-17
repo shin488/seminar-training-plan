@@ -317,6 +317,310 @@ h3 {
   z-index: 1;
 }
 
+/* ===== Facility ===== */
+.facility-intro {
+  margin-bottom: 20px;
+}
+
+.facility-desc {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.8;
+}
+
+.facility-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.facility-card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid #e8ecf1;
+  transition: box-shadow 0.2s;
+}
+
+.facility-card:hover {
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.facility-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #2563eb, #0ea5e9);
+  color: white;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.facility-card h4 {
+  font-size: 16px;
+  color: #1a365d;
+  margin-bottom: 10px;
+}
+
+.facility-card p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.7;
+}
+
+.exhibit-list {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid #e8ecf1;
+}
+
+.exhibit-list h4 {
+  font-size: 15px;
+  color: #1a365d;
+  margin-bottom: 15px;
+}
+
+.exhibit-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.exhibit-tag {
+  background: #f0fdf4;
+  color: #166534;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  border: 1px solid #bbf7d0;
+}
+
+/* ===== Schedule ===== */
+.schedule-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 10px;
+}
+
+.schedule-day {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e8ecf1;
+  overflow: hidden;
+}
+
+.day-header {
+  padding: 14px 20px;
+  font-weight: 700;
+  font-size: 16px;
+  color: white;
+}
+
+.day-header.day1 {
+  background: linear-gradient(135deg, #2563eb, #0ea5e9);
+}
+
+.day-header.day2 {
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+}
+
+.schedule-timeline {
+  padding: 20px;
+}
+
+.schedule-item {
+  display: flex;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.schedule-item:last-child {
+  border-bottom: none;
+}
+
+.schedule-item .time {
+  min-width: 60px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.schedule-item .detail strong {
+  font-size: 14px;
+  color: #1a365d;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.schedule-item .detail p {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.schedule-item.highlight-item {
+  background: #eff6ff;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 4px -12px;
+}
+
+.schedule-item.highlight-item .time {
+  color: #1d4ed8;
+}
+
+/* ===== Learning Outcomes ===== */
+.outcomes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.outcome-card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid #e8ecf1;
+  text-align: center;
+  transition: box-shadow 0.2s;
+}
+
+.outcome-card:hover {
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.outcome-icon {
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+.outcome-card h4 {
+  font-size: 18px;
+  color: #1a365d;
+  margin-bottom: 15px;
+}
+
+.outcome-card ul {
+  text-align: left;
+  margin-left: 16px;
+  font-size: 13px;
+}
+
+.outcome-card li {
+  margin-bottom: 8px;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* ===== Access ===== */
+.access-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 10px;
+}
+
+.access-info {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid #e8ecf1;
+}
+
+.access-item {
+  margin-bottom: 16px;
+}
+
+.access-item:last-child {
+  margin-bottom: 0;
+}
+
+.access-label {
+  display: inline-block;
+  background: #1a365d;
+  color: white;
+  padding: 3px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.access-item p {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.access-transport {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid #e8ecf1;
+}
+
+.access-transport h4 {
+  font-size: 15px;
+  color: #1a365d;
+  margin-bottom: 16px;
+}
+
+.transport-item {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+  align-items: flex-start;
+}
+
+.transport-item:last-child {
+  margin-bottom: 0;
+}
+
+.transport-icon {
+  font-size: 24px;
+}
+
+.transport-item strong {
+  font-size: 14px;
+  color: #1a365d;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.transport-item p {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.map-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.map-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: #1a365d;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.map-btn:hover {
+  background: #2563eb;
+}
+
 /* ===== Sightseeing ===== */
 .sightseeing {
   margin-bottom: 50px;
@@ -489,6 +793,22 @@ footer {
   }
 
   .dx-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .facility-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .schedule-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .outcomes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .access-grid {
     grid-template-columns: 1fr;
   }
 
