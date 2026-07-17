@@ -702,16 +702,16 @@
       attribution: '© OpenStreetMap contributors'
     }).addTo(map);
 
-    // Main marker - IoT Lab
+    // Main marker - IoT Lab (larger, always visible)
     const labIcon = L.divIcon({
-      html: '<div style="background:#2563eb;color:white;padding:8px 14px;border-radius:20px;font-weight:700;font-size:13px;white-space:nowrap;box-shadow:0 4px 12px rgba(37,99,235,0.4);border:2px solid white;">📍 IoT推進ラボ</div>',
+      html: '<div style="background:linear-gradient(135deg,#2563eb,#0ea5e9);color:white;padding:10px 18px;border-radius:25px;font-weight:700;font-size:14px;white-space:nowrap;box-shadow:0 6px 20px rgba(37,99,235,0.5);border:3px solid white;letter-spacing:0.5px;">静岡県AI・IoT推進ラボ</div>',
       className: '',
-      iconAnchor: [60, 30]
+      iconAnchor: [90, 25]
     });
-    L.marker([34.9617, 138.3908], {icon: labIcon}).addTo(map)
-      .bindPopup('<b>静岡県AI・IoT推進ラボ</b><br>〒421-1298 静岡市葵区牧ヶ谷2078');
+    L.marker([34.9617, 138.3908], {icon: labIcon, zIndexOffset: 1000}).addTo(map)
+      .bindPopup('<b>静岡県AI・IoT推進ラボ</b><br>〒421-1298 静岡市葵区牧ヶ谷2078<br>TEL: 054-278-3027');
 
-    // Nearby markers
+    // Nearby spots (always visible labels)
     const spots = [
       {name: '牧ヶ谷湧水公園', lat: 34.9625, lng: 138.3895, color: '#059669'},
       {name: '光鏡院', lat: 34.9610, lng: 138.3915, color: '#7c3aed'},
@@ -724,9 +724,9 @@
 
     spots.forEach(spot => {
       const icon = L.divIcon({
-        html: `<div style="background:${spot.color};color:white;padding:4px 10px;border-radius:12px;font-size:11px;font-weight:600;white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,0.2);border:1.5px solid white;">${spot.name}</div>`,
+        html: `<div style="background:${spot.color};color:white;padding:5px 12px;border-radius:14px;font-size:11px;font-weight:600;white-space:nowrap;box-shadow:0 3px 10px rgba(0,0,0,0.25);border:2px solid white;letter-spacing:0.3px;">${spot.name}</div>`,
         className: '',
-        iconAnchor: [40, 15]
+        iconAnchor: [50, 15]
       });
       L.marker([spot.lat, spot.lng], {icon: icon}).addTo(map);
     });
