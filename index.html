@@ -7,143 +7,165 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="hero-label">Shizuoka IoT Promotion Lab</p>
+      <h1>静岡県IoT推進ラボ<br><span class="hero-sub">ゼミ研修案</span></h1>
+      <p class="hero-desc">AI・IoT・DXの最前線を、実践的に学べる研修プログラム</p>
+      <a href="#purpose" class="hero-btn">研修内容を見る</a>
+    </div>
+  </section>
+
   <div class="container">
-    <header>
-      <h1>静岡県IoT推進ラボ</h1>
-      <h2>ゼミ研修案</h2>
-    </header>
 
-    <section class="destination">
-      <h3>行き先</h3>
-      <p class="highlight">静岡県IoT推進ラボ</p>
-    </section>
-
-    <section class="purpose">
+    <!-- Purpose -->
+    <section id="purpose" class="purpose">
       <h3>研修の目的</h3>
       <div class="purpose-grid">
         <div class="purpose-item ai">
+          <div class="purpose-icon">🤖</div>
           <h4>AI</h4>
-          <p>人工知能技術の実践的活用</p>
+          <p>人工知能技術の<br>実践的活用</p>
         </div>
         <div class="purpose-item iot">
+          <div class="purpose-icon">📡</div>
           <h4>IoT</h4>
           <p>モノのインターネットによる<br>データ収集・活用</p>
         </div>
         <div class="purpose-item dx">
+          <div class="purpose-icon">🚀</div>
           <h4>DX</h4>
           <p>デジタルトランスフォーメーション<br>推進</p>
         </div>
       </div>
     </section>
 
-    <section class="content">
-      <h3>AI（人工知能）</h3>
-      <div class="content-block">
-        <h4>AIによる画像認識・外観検査</h4>
-        <ul>
-          <li>カメラで製品の傷や欠陥を自動検出</li>
-          <li>人の目による検査との違いを学べる</li>
-        </ul>
-      </div>
-      <div class="content-block">
-        <h4>AIによる異常検知</h4>
-        <ul>
-          <li>機械の振動や温度の変化から故障の兆候を検出</li>
-        </ul>
-      </div>
-      <div class="content-block">
-        <h4>AIを活用した需要予測・在庫管理</h4>
-        <ul>
-          <li>過去のデータを分析し、生産量や在庫を最適化する仕組み</li>
-        </ul>
-      </div>
-      <div class="content-block">
-        <h4>ディープラーニングの製造業への応用</h4>
-        <ul>
-          <li>品質管理や検査工程での活用事例</li>
-        </ul>
+    <!-- AI -->
+    <section class="content-section">
+      <h3><span class="section-icon">🧠</span> AI（人工知能）</h3>
+      <div class="content-grid">
+        <div class="content-card">
+          <h4>画像認識・外観検査</h4>
+          <ul>
+            <li>カメラで製品の傷や欠陥を自動検出</li>
+            <li>人の目による検査との違いを学べる</li>
+          </ul>
+        </div>
+        <div class="content-card">
+          <h4>異常検知</h4>
+          <ul>
+            <li>機械の振動や温度の変化から故障の兆候を検出</li>
+          </ul>
+        </div>
+        <div class="content-card">
+          <h4>需要予測・在庫管理</h4>
+          <ul>
+            <li>過去のデータを分析し、生産量や在庫を最適化</li>
+          </ul>
+        </div>
+        <div class="content-card">
+          <h4>ディープラーニング応用</h4>
+          <ul>
+            <li>品質管理や検査工程での活用事例</li>
+          </ul>
+        </div>
       </div>
     </section>
 
-    <section class="content">
-      <h3>IoT（モノのインターネット）</h3>
-      <div class="content-block">
-        <h4>センサーによるデータ収集</h4>
-        <ul class="sensor-list">
-          <li>温度</li>
-          <li>湿度</li>
-          <li>振動</li>
-          <li>圧力</li>
-          <li>電力使用量</li>
-        </ul>
+    <!-- IoT -->
+    <section class="content-section">
+      <h3><span class="section-icon">🌐</span> IoT（モノのインターネット）</h3>
+      <div class="content-grid">
+        <div class="content-card wide">
+          <h4>センサーによるデータ収集</h4>
+          <div class="sensor-list">
+            <span class="sensor-tag">🌡 温度</span>
+            <span class="sensor-tag">💧 湿度</span>
+            <span class="sensor-tag">📳 振動</span>
+            <span class="sensor-tag">⏲ 圧力</span>
+            <span class="sensor-tag">⚡ 電力使用量</span>
+          </div>
+        </div>
+        <div class="content-card">
+          <h4>省電力無線通信</h4>
+          <p>LPWAなどの省電力無線通信</p>
+        </div>
+        <div class="content-card">
+          <h4>RFID管理</h4>
+          <p>RFIDによる部品・製品管理</p>
+        </div>
       </div>
-      <div class="content-block">
-        <h4>LPWAなどの省電力無線通信</h4>
-      </div>
-      <div class="content-block">
-        <h4>RFIDによる部品・製品管理</h4>
-      </div>
-      <div class="content-block">
+      <div class="content-card full-width">
         <h4>IoTデバイスの仕組み</h4>
-        <ul>
-          <li>センサーからクラウドまでのデータの流れ</li>
-        </ul>
+        <div class="flow-diagram">
+          <div class="flow-step">センサー</div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step">ゲートウェイ</div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step">クラウド</div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step">可視化</div>
+        </div>
       </div>
     </section>
 
-    <section class="content">
-      <h3>DX（デジタルトランスフォーメーション）</h3>
-      <div class="content-block">
-        <h4>生産ラインの見える化</h4>
-        <ul>
-          <li>稼働率のリアルタイム表示</li>
-        </ul>
-      </div>
-      <div class="content-block">
-        <h4>生産工程の効率化</h4>
-      </div>
-      <div class="content-block">
-        <h4>データを活用した経営改善</h4>
-      </div>
-      <div class="content-block">
-        <h4>人手不足への対応</h4>
-      </div>
-      <div class="content-block">
-        <h4>ペーパーレス化・デジタル化</h4>
+    <!-- DX -->
+    <section class="content-section">
+      <h3><span class="section-icon">📊</span> DX（デジタルトランスフォーメーション）</h3>
+      <div class="dx-grid">
+        <div class="dx-item">
+          <span class="dx-num">01</span>
+          <h4>生産ラインの見える化</h4>
+          <p>稼働率のリアルタイム表示</p>
+        </div>
+        <div class="dx-item">
+          <span class="dx-num">02</span>
+          <h4>生産工程の効率化</h4>
+        </div>
+        <div class="dx-item">
+          <span class="dx-num">03</span>
+          <h4>データ活用による経営改善</h4>
+        </div>
+        <div class="dx-item">
+          <span class="dx-num">04</span>
+          <h4>人手不足への対応</h4>
+        </div>
+        <div class="dx-item">
+          <span class="dx-num">05</span>
+          <h4>ペーパーレス化・デジタル化</h4>
+        </div>
       </div>
     </section>
 
+    <!-- Sightseeing -->
     <section class="sightseeing">
-      <h3>観光</h3>
-      <div class="spot">
-        <h4>牧ヶ谷湧水公園（徒歩約5〜10分）</h4>
-        <ul>
-          <li>牧ヶ谷地域の自然を感じられる公園</li>
-          <li>湧水や緑を楽しむことができる</li>
-          <li>静かな環境で散策や休憩に適している</li>
-          <li>AI・IoT施設見学後のリフレッシュ場所としておすすめ</li>
-        </ul>
-      </div>
-      <div class="spot">
-        <h4>光鏡院（徒歩約5分）</h4>
-        <ul>
-          <li>牧ヶ谷地域にある寺院</li>
-          <li>地域の歴史や文化を感じられる場所</li>
-          <li>落ち着いた雰囲気で短時間の散策に向いている</li>
-        </ul>
-      </div>
-      <div class="spot">
-        <h4>千手寺（徒歩約5分）</h4>
-        <ul>
-          <li>牧ヶ谷周辺の寺院</li>
-          <li>静かな境内を散策できる</li>
-          <li>地域に根付いた文化や歴史を知ることができる</li>
-        </ul>
+      <h3><span class="section-icon">⛩</span> 観光スポット</h3>
+      <p class="section-subtitle">研修の合間に、牧ヶ谷の自然と文化を</p>
+      <div class="spot-grid">
+        <div class="spot-card">
+          <div class="spot-badge">徒歩5〜10分</div>
+          <h4>牧ヶ谷湧水公園</h4>
+          <p>牧ヶ谷地域の自然を感じられる公園。湧水や緑を楽しむことができる、静かな環境で散策や休憩に適している。</p>
+        </div>
+        <div class="spot-card">
+          <div class="spot-badge">徒歩5分</div>
+          <h4>光鏡院</h4>
+          <p>牧ヶ谷地域にある寺院。地域の歴史や文化を感じられる場所。落ち着いた雰囲気で短時間の散策に向いている。</p>
+        </div>
+        <div class="spot-card">
+          <div class="spot-badge">徒歩5分</div>
+          <h4>千手寺</h4>
+          <p>牧ヶ谷周辺の寺院。静かな境内を散策できる。地域に根付いた文化や歴史を知ることができる。</p>
+        </div>
       </div>
     </section>
 
-    <section class="budget">
-      <h3>予算（概算）</h3>
+    <!-- Budget -->
+    <section class="budget-section">
+      <h3><span class="section-icon">💰</span> 予算（概算）</h3>
       <table>
         <thead>
           <tr>
@@ -171,6 +193,19 @@
         </tbody>
       </table>
     </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <h3>参加しませんか？</h3>
+      <p>最新のAI・IoT・DX技術を、実際の施設で体験できる貴重な研修です。</p>
+      <a href="#" class="cta-btn">お問い合わせはこちら</a>
+    </section>
+
   </div>
+
+  <footer>
+    <p>&copy; 2025 静岡県IoT推進ラボ</p>
+  </footer>
+
 </body>
 </html>
