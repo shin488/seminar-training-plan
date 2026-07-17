@@ -5,17 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>静岡県IoT推進ラボ ゼミ研修案</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-bg"></div>
+    <div class="hero-bg">
+      <div class="hero-orb hero-orb-1"></div>
+      <div class="hero-orb hero-orb-2"></div>
+      <div class="hero-orb hero-orb-3"></div>
+      <div class="hero-grid"></div>
+    </div>
     <div class="hero-content">
-      <p class="hero-label">Shizuoka IoT Promotion Lab</p>
-      <h1>静岡県IoT推進ラボ<br><span class="hero-sub">ゼミ研修案</span></h1>
-      <p class="hero-desc">AI・IoT・DXの最前線を、実践的に学べる研修プログラム</p>
-      <a href="#purpose" class="hero-btn">研修内容を見る</a>
+      <div class="hero-badge">Shizuoka IoT Promotion Lab</div>
+      <h1 class="hero-title">静岡県IoT推進ラボ<br><span class="hero-sub">ゼミ研修案</span></h1>
+      <p class="hero-desc">AI・IoT・DXの最前線を、<br>実践的に学べる研修プログラム</p>
+      <div class="hero-tags">
+        <span class="hero-tag">🤖 AI</span>
+        <span class="hero-tag">📡 IoT</span>
+        <span class="hero-tag">🚀 DX</span>
+      </div>
+      <a href="#purpose" class="hero-btn">
+        <span>研修内容を見る</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+      </a>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-indicator">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
     </div>
   </section>
 
@@ -23,31 +45,41 @@
 
     <!-- Purpose -->
     <section id="purpose" class="purpose">
-      <h3>研修の目的</h3>
+      <div class="section-header">
+        <span class="section-badge">PURPOSE</span>
+        <h3>研修の目的</h3>
+      </div>
       <div class="purpose-grid">
         <div class="purpose-item ai">
           <div class="purpose-icon">🤖</div>
           <h4>AI</h4>
           <p>人工知能技術の<br>実践的活用</p>
+          <div class="purpose-glow"></div>
         </div>
         <div class="purpose-item iot">
           <div class="purpose-icon">📡</div>
           <h4>IoT</h4>
           <p>モノのインターネットによる<br>データ収集・活用</p>
+          <div class="purpose-glow"></div>
         </div>
         <div class="purpose-item dx">
           <div class="purpose-icon">🚀</div>
           <h4>DX</h4>
           <p>デジタルトランスフォーメーション<br>推進</p>
+          <div class="purpose-glow"></div>
         </div>
       </div>
     </section>
 
     <!-- AI -->
-    <section class="content-section">
-      <h3><span class="section-icon">🧠</span> AI（人工知能）</h3>
+    <section class="content-section" data-section="ai">
+      <div class="section-header">
+        <span class="section-badge">AI</span>
+        <h3><span class="section-icon">🧠</span> AI（人工知能）</h3>
+      </div>
       <div class="content-grid">
         <div class="content-card">
+          <div class="card-accent ai-accent"></div>
           <h4>画像認識・外観検査</h4>
           <ul>
             <li>カメラで製品の傷や欠陥を自動検出</li>
@@ -55,18 +87,21 @@
           </ul>
         </div>
         <div class="content-card">
+          <div class="card-accent ai-accent"></div>
           <h4>異常検知</h4>
           <ul>
             <li>機械の振動や温度の変化から故障の兆候を検出</li>
           </ul>
         </div>
         <div class="content-card">
+          <div class="card-accent ai-accent"></div>
           <h4>需要予測・在庫管理</h4>
           <ul>
             <li>過去のデータを分析し、生産量や在庫を最適化</li>
           </ul>
         </div>
         <div class="content-card">
+          <div class="card-accent ai-accent"></div>
           <h4>ディープラーニング応用</h4>
           <ul>
             <li>品質管理や検査工程での活用事例</li>
@@ -76,10 +111,14 @@
     </section>
 
     <!-- IoT -->
-    <section class="content-section">
-      <h3><span class="section-icon">🌐</span> IoT（モノのインターネット）</h3>
+    <section class="content-section" data-section="iot">
+      <div class="section-header">
+        <span class="section-badge">IoT</span>
+        <h3><span class="section-icon">🌐</span> IoT（モノのインターネット）</h3>
+      </div>
       <div class="content-grid">
         <div class="content-card wide">
+          <div class="card-accent iot-accent"></div>
           <h4>センサーによるデータ収集</h4>
           <div class="sensor-list">
             <span class="sensor-tag">🌡 温度</span>
@@ -90,59 +129,91 @@
           </div>
         </div>
         <div class="content-card">
+          <div class="card-accent iot-accent"></div>
           <h4>省電力無線通信</h4>
           <p>LPWAなどの省電力無線通信</p>
         </div>
         <div class="content-card">
+          <div class="card-accent iot-accent"></div>
           <h4>RFID管理</h4>
           <p>RFIDによる部品・製品管理</p>
         </div>
       </div>
-      <div class="content-card full-width">
+      <div class="content-card full-width flow-card">
+        <div class="card-accent iot-accent"></div>
         <h4>IoTデバイスの仕組み</h4>
         <div class="flow-diagram">
-          <div class="flow-step">センサー</div>
-          <div class="flow-arrow">→</div>
-          <div class="flow-step">ゲートウェイ</div>
-          <div class="flow-arrow">→</div>
-          <div class="flow-step">クラウド</div>
-          <div class="flow-arrow">→</div>
-          <div class="flow-step">可視化</div>
+          <div class="flow-step">
+            <span class="flow-icon">📡</span>
+            <span>センサー</span>
+          </div>
+          <div class="flow-arrow">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-7-7l7 7-7 7"/></svg>
+          </div>
+          <div class="flow-step">
+            <span class="flow-icon">🔌</span>
+            <span>ゲートウェイ</span>
+          </div>
+          <div class="flow-arrow">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-7-7l7 7-7 7"/></svg>
+          </div>
+          <div class="flow-step">
+            <span class="flow-icon">☁️</span>
+            <span>クラウド</span>
+          </div>
+          <div class="flow-arrow">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-7-7l7 7-7 7"/></svg>
+          </div>
+          <div class="flow-step">
+            <span class="flow-icon">📊</span>
+            <span>可視化</span>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- DX -->
-    <section class="content-section">
-      <h3><span class="section-icon">📊</span> DX（デジタルトランスフォーメーション）</h3>
+    <section class="content-section" data-section="dx">
+      <div class="section-header">
+        <span class="section-badge">DX</span>
+        <h3><span class="section-icon">📊</span> DX（デジタルトランスフォーメーション）</h3>
+      </div>
       <div class="dx-grid">
         <div class="dx-item">
           <span class="dx-num">01</span>
+          <div class="dx-icon">👁️</div>
           <h4>生産ラインの見える化</h4>
           <p>稼働率のリアルタイム表示</p>
         </div>
         <div class="dx-item">
           <span class="dx-num">02</span>
+          <div class="dx-icon">⚡</div>
           <h4>生産工程の効率化</h4>
         </div>
         <div class="dx-item">
           <span class="dx-num">03</span>
+          <div class="dx-icon">📈</div>
           <h4>データ活用による経営改善</h4>
         </div>
         <div class="dx-item">
           <span class="dx-num">04</span>
+          <div class="dx-icon">🤝</div>
           <h4>人手不足への対応</h4>
         </div>
         <div class="dx-item">
           <span class="dx-num">05</span>
+          <div class="dx-icon">📋</div>
           <h4>ペーパーレス化・デジタル化</h4>
         </div>
       </div>
     </section>
 
     <!-- Facility -->
-    <section class="content-section">
-      <h3><span class="section-icon">🏢</span> 施設紹介</h3>
+    <section class="content-section" data-section="facility">
+      <div class="section-header">
+        <span class="section-badge">FACILITY</span>
+        <h3><span class="section-icon">🏢</span> 施設紹介</h3>
+      </div>
       <div class="facility-intro">
         <p class="facility-desc">静岡県AI・IoT推進ラボは、県内の中小企業へのIoT導入支援拠点として、静岡県工業技術研究所内に設置されています。最新のIoT関連機器を「見て・触れて・試せる」環境を提供します。</p>
       </div>
@@ -174,14 +245,23 @@
     </section>
 
     <!-- Schedule -->
-    <section class="content-section">
-      <h3><span class="section-icon">📅</span> 1泊2日スケジュール</h3>
+    <section class="content-section" data-section="schedule">
+      <div class="section-header">
+        <span class="section-badge">SCHEDULE</span>
+        <h3><span class="section-icon">📅</span> 1泊2日スケジュール</h3>
+      </div>
       <p class="section-subtitle">実習と観光を両立する、充実した2日間</p>
       <div class="schedule-wrapper">
         <div class="schedule-day">
-          <div class="day-header day1">1日目</div>
+          <div class="day-header day1">
+            <span class="day-label">DAY</span>
+            <span class="day-num">1</span>
+            <span class="day-title">実習 &amp; 観光</span>
+          </div>
           <div class="schedule-timeline">
+            <div class="timeline-line"></div>
             <div class="schedule-item">
+              <div class="time-dot"></div>
               <div class="time">9:00</div>
               <div class="detail">
                 <strong>受付・オリエンテーション</strong>
@@ -189,6 +269,7 @@
               </div>
             </div>
             <div class="schedule-item">
+              <div class="time-dot"></div>
               <div class="time">9:30</div>
               <div class="detail">
                 <strong>展示体験室ツアー</strong>
@@ -196,6 +277,7 @@
               </div>
             </div>
             <div class="schedule-item">
+              <div class="time-dot"></div>
               <div class="time">10:30</div>
               <div class="detail">
                 <strong>IoT基礎講義</strong>
@@ -203,12 +285,14 @@
               </div>
             </div>
             <div class="schedule-item">
+              <div class="time-dot"></div>
               <div class="time">12:00</div>
               <div class="detail">
                 <strong>昼食</strong>
               </div>
             </div>
             <div class="schedule-item highlight-item">
+              <div class="time-dot active"></div>
               <div class="time">13:00</div>
               <div class="detail">
                 <strong>実習（Raspberry Pi + Node-RED）</strong>
@@ -216,32 +300,37 @@
               </div>
             </div>
             <div class="schedule-item">
+              <div class="time-dot"></div>
               <div class="time">15:00</div>
               <div class="detail">
                 <strong>実習まとめ・質疑応答</strong>
               </div>
             </div>
             <div class="schedule-item">
+              <div class="time-dot"></div>
               <div class="time">16:00</div>
               <div class="detail">
                 <strong>チェックイン・自由時間</strong>
               </div>
             </div>
-            <div class="schedule-item">
+            <div class="schedule-item sightseeing-item">
+              <div class="time-dot"></div>
               <div class="time">17:00</div>
               <div class="detail">
                 <strong>牧ヶ谷湧水公園</strong>
                 <p>徒歩5〜10分。牧ヶ谷地域の自然を感じられる公園。湧水や緑を楽しむ</p>
               </div>
             </div>
-            <div class="schedule-item">
+            <div class="schedule-item sightseeing-item">
+              <div class="time-dot"></div>
               <div class="time">17:30</div>
               <div class="detail">
                 <strong>光鏡院</strong>
                 <p>徒歩5分。牧ヶ谷地域の歴史と文化を感じる寺院</p>
               </div>
             </div>
-            <div class="schedule-item">
+            <div class="schedule-item sightseeing-item">
+              <div class="time-dot"></div>
               <div class="time">18:00</div>
               <div class="detail">
                 <strong>千手寺</strong>
@@ -249,6 +338,7 @@
               </div>
             </div>
             <div class="schedule-item">
+              <div class="time-dot"></div>
               <div class="time">19:00〜</div>
               <div class="detail">
                 <strong>夕食・宿泊</strong>
@@ -257,22 +347,30 @@
           </div>
         </div>
         <div class="schedule-day">
-          <div class="day-header day2">2日目</div>
+          <div class="day-header day2">
+            <span class="day-label">DAY</span>
+            <span class="day-num">2</span>
+            <span class="day-title">観光 &amp; 帰路</span>
+          </div>
           <div class="schedule-timeline">
+            <div class="timeline-line"></div>
             <div class="schedule-item">
+              <div class="time-dot"></div>
               <div class="time">8:00</div>
               <div class="detail">
                 <strong>チェックアウト</strong>
               </div>
             </div>
-            <div class="schedule-item">
+            <div class="schedule-item sightseeing-item">
+              <div class="time-dot"></div>
               <div class="time">9:00</div>
               <div class="detail">
                 <strong>静岡県美術館</strong>
                 <p>駅前再開発ビル「Cenova」内。県内外の作家の作品を展示</p>
               </div>
             </div>
-            <div class="schedule-item">
+            <div class="schedule-item sightseeing-item">
+              <div class="time-dot"></div>
               <div class="time">10:30</div>
               <div class="detail">
                 <strong>駿府城（駿府城公園）</strong>
@@ -280,20 +378,23 @@
               </div>
             </div>
             <div class="schedule-item">
+              <div class="time-dot"></div>
               <div class="time">12:00</div>
               <div class="detail">
                 <strong>昼食</strong>
                 <p>静岡駅周辺で静岡せいか・うなぎ等を味わう</p>
               </div>
             </div>
-            <div class="schedule-item">
+            <div class="schedule-item sightseeing-item">
+              <div class="time-dot"></div>
               <div class="time">13:30</div>
               <div class="detail">
                 <strong>三保松原</strong>
                 <p>車で約30分。日本三景の一つ。富士山と松林の絶景スポット</p>
               </div>
             </div>
-            <div class="schedule-item">
+            <div class="schedule-item sightseeing-item">
+              <div class="time-dot"></div>
               <div class="time">15:30</div>
               <div class="detail">
                 <strong>清水港・三保海水浴場周辺散策</strong>
@@ -301,6 +402,7 @@
               </div>
             </div>
             <div class="schedule-item">
+              <div class="time-dot"></div>
               <div class="time">16:30</div>
               <div class="detail">
                 <strong>静岡静岡駅へ戻る</strong>
@@ -308,6 +410,7 @@
               </div>
             </div>
             <div class="schedule-item">
+              <div class="time-dot"></div>
               <div class="time">17:00</div>
               <div class="detail">
                 <strong>お土産選び・散策</strong>
@@ -315,6 +418,7 @@
               </div>
             </div>
             <div class="schedule-item highlight-item">
+              <div class="time-dot active"></div>
               <div class="time">19:00</div>
               <div class="detail">
                 <strong>新幹線で帰路</strong>
@@ -327,11 +431,14 @@
     </section>
 
     <!-- Learning Outcomes -->
-    <section class="content-section">
-      <h3><span class="section-icon">🎯</span> 学習成果</h3>
+    <section class="content-section" data-section="outcomes">
+      <div class="section-header">
+        <span class="section-badge">OUTCOMES</span>
+        <h3><span class="section-icon">🎯</span> 学習成果</h3>
+      </div>
       <p class="section-subtitle">この研修を通じて得られる知識とスキル</p>
       <div class="outcomes-grid">
-        <div class="outcome-card">
+        <div class="outcome-card ai-outcome">
           <div class="outcome-icon">🧠</div>
           <h4>AI</h4>
           <ul>
@@ -341,7 +448,7 @@
             <li>ディープラーニングの製造業応用を知ることができる</li>
           </ul>
         </div>
-        <div class="outcome-card">
+        <div class="outcome-card iot-outcome">
           <div class="outcome-icon">📡</div>
           <h4>IoT</h4>
           <ul>
@@ -351,7 +458,7 @@
             <li>自社工場でのIoT導入イメージを具体化できる</li>
           </ul>
         </div>
-        <div class="outcome-card">
+        <div class="outcome-card dx-outcome">
           <div class="outcome-icon">🚀</div>
           <h4>DX</h4>
           <ul>
@@ -364,9 +471,71 @@
       </div>
     </section>
 
+    <!-- Sightseeing -->
+    <section class="content-section" data-section="sightseeing">
+      <div class="section-header">
+        <span class="section-badge">SIGHTSEEING</span>
+        <h3><span class="section-icon">⛩</span> 観光スポット</h3>
+      </div>
+      <p class="section-subtitle">研修の合間に、牧ヶ谷の自然と文化を</p>
+      <div class="spot-grid">
+        <div class="spot-card spot-1">
+          <img src="images/spot-yusui.jpg" alt="牧ヶ谷湧水公園" class="spot-img" loading="lazy">
+          <div class="spot-content">
+            <div class="spot-badge">徒歩5〜10分</div>
+            <h4>牧ヶ谷湧水公園</h4>
+            <p>牧ヶ谷地域の自然を感じられる公園。湧水や緑を楽しむことができる、静かな環境で散策や休憩に適している。</p>
+          </div>
+        </div>
+        <div class="spot-card spot-2">
+          <img src="images/spot-temple.jpg" alt="光鏡院" class="spot-img" loading="lazy">
+          <div class="spot-content">
+            <div class="spot-badge">徒歩5分</div>
+            <h4>光鏡院</h4>
+            <p>牧ヶ谷地域にある寺院。地域の歴史や文化を感じられる場所。落ち着いた雰囲気で短時間の散策に向いている。</p>
+          </div>
+        </div>
+        <div class="spot-card spot-3">
+          <img src="images/spot-temple.jpg" alt="千手寺" class="spot-img" loading="lazy">
+          <div class="spot-content">
+            <div class="spot-badge">徒歩5分</div>
+            <h4>千手寺</h4>
+            <p>牧ヶ谷周辺の寺院。静かな境内を散策できる。地域に根付いた文化や歴史を知ることができる。</p>
+          </div>
+        </div>
+        <div class="spot-card spot-4">
+          <img src="images/spot-museum.jpg" alt="静岡県美術館" class="spot-img" loading="lazy">
+          <div class="spot-content">
+            <div class="spot-badge">駅前</div>
+            <h4>静岡県美術館</h4>
+            <p>駅前再開発ビル「Cenova」内。県内外の作家の作品を展示する県立美術館。</p>
+          </div>
+        </div>
+        <div class="spot-card spot-5">
+          <img src="images/spot-castle.jpg" alt="駿府城" class="spot-img" loading="lazy">
+          <div class="spot-content">
+            <div class="spot-badge">徒歩15分</div>
+            <h4>駿府城（駿府城公園）</h4>
+            <p>家康ゆかりの城址。天守台や石垣を散策できる歴史的公園。</p>
+          </div>
+        </div>
+        <div class="spot-card spot-6">
+          <img src="images/spot-fuji.jpg" alt="三保松原" class="spot-img" loading="lazy">
+          <div class="spot-content">
+            <div class="spot-badge">車で約30分</div>
+            <h4>三保松原</h4>
+            <p>日本三景の一つ。富士山と松林の絶景スポット。世界遺産にも登録されている。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Access -->
-    <section class="content-section">
-      <h3><span class="section-icon">📍</span> アクセス</h3>
+    <section class="content-section" data-section="access">
+      <div class="section-header">
+        <span class="section-badge">ACCESS</span>
+        <h3><span class="section-icon">📍</span> アクセス</h3>
+      </div>
       <div class="access-grid">
         <div class="access-info">
           <div class="access-item">
@@ -412,84 +581,111 @@
         </div>
       </div>
       <div class="map-link">
-        <a href="https://www.google.com/maps/search/静岡県工業技術研究所" target="_blank" class="map-btn">Google マップで見る</a>
-      </div>
-    </section>
-
-    <!-- Sightseeing -->
-    <section class="sightseeing">
-      <h3><span class="section-icon">⛩</span> 観光スポット</h3>
-      <p class="section-subtitle">研修の合間に、牧ヶ谷の自然と文化を</p>
-      <div class="spot-grid">
-        <div class="spot-card">
-          <div class="spot-badge">徒歩5〜10分</div>
-          <h4>牧ヶ谷湧水公園</h4>
-          <p>牧ヶ谷地域の自然を感じられる公園。湧水や緑を楽しむことができる、静かな環境で散策や休憩に適している。</p>
-        </div>
-        <div class="spot-card">
-          <div class="spot-badge">徒歩5分</div>
-          <h4>光鏡院</h4>
-          <p>牧ヶ谷地域にある寺院。地域の歴史や文化を感じられる場所。落ち着いた雰囲気で短時間の散策に向いている。</p>
-        </div>
-        <div class="spot-card">
-          <div class="spot-badge">徒歩5分</div>
-          <h4>千手寺</h4>
-          <p>牧ヶ谷周辺の寺院。静かな境内を散策できる。地域に根付いた文化や歴史を知ることができる。</p>
-        </div>
-        <div class="spot-card">
-          <div class="spot-badge">駅前</div>
-          <h4>静岡県美術館</h4>
-          <p>駅前再開発ビル「Cenova」内。県内外の作家の作品を展示する県立美術館。</p>
-        </div>
-        <div class="spot-card">
-          <div class="spot-badge">徒歩15分</div>
-          <h4>駿府城（駿府城公園）</h4>
-          <p>家康ゆかりの城址。天守台や石垣を散策できる歴史的公園。</p>
-        </div>
-        <div class="spot-card">
-          <div class="spot-badge">車で約30分</div>
-          <h4>三保松原</h4>
-          <p>日本三景の一つ。富士山と松林の絶景スポット。世界遺産にも登録されている。</p>
-        </div>
+        <a href="https://www.google.com/maps/search/静岡県工業技術研究所" target="_blank" class="map-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Google マップで見る
+        </a>
       </div>
     </section>
 
     <!-- Budget -->
-    <section class="budget-section">
-      <h3><span class="section-icon">💰</span> 予算（概算）</h3>
-      <table>
-        <thead>
-          <tr>
-            <th>項目</th>
-            <th>金額</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>交通費</td>
-            <td>￥13,000</td>
-          </tr>
-          <tr>
-            <td>宿泊費</td>
-            <td>￥5,000〜10,000</td>
-          </tr>
-          <tr>
-            <td>その他</td>
-            <td>￥7,000〜12,000</td>
-          </tr>
-          <tr class="total">
-            <td>合計</td>
-            <td>￥25,000〜30,000</td>
-          </tr>
-        </tbody>
-      </table>
+    <section class="content-section" data-section="budget">
+      <div class="section-header">
+        <span class="section-badge">BUDGET</span>
+        <h3><span class="section-icon">💰</span> 予算（概算）</h3>
+      </div>
+      <div class="budget-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>項目</th>
+              <th>金額</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <span class="budget-icon">🚄</span>
+                交通費
+              </td>
+              <td>￥13,000</td>
+            </tr>
+            <tr>
+              <td>
+                <span class="budget-icon">🏨</span>
+                宿泊費
+              </td>
+              <td>￥5,000〜10,000</td>
+            </tr>
+            <tr>
+              <td>
+                <span class="budget-icon">🍜</span>
+                その他
+              </td>
+              <td>￥7,000〜12,000</td>
+            </tr>
+            <tr class="total">
+              <td>
+                <span class="budget-icon">💰</span>
+                合計
+              </td>
+              <td>￥25,000〜30,000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
 
   </div>
 
-  <footer>
-    <p>&copy; 2025 静岡県IoT推進ラボ</p>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">静岡県IoT推進ラボ</div>
+      <p class="footer-copy">&copy; 2025 静岡県IoT推進ラボ</p>
+    </div>
   </footer>
+
+  <script>
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('[data-section]').forEach(section => {
+      observer.observe(section);
+    });
+
+    // Hero parallax
+    window.addEventListener('scroll', () => {
+      const scrolled = window.pageYOffset;
+      const hero = document.querySelector('.hero-content');
+      if (hero) {
+        hero.style.transform = `translateY(${scrolled * 0.3}px)`;
+        hero.style.opacity = 1 - (scrolled / 600);
+      }
+    });
+  </script>
 
 </body>
 </html>

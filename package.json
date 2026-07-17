@@ -1,0 +1,20 @@
+{
+  "name": "seminar-training-plan",
+  "version": "1.0.0",
+  "description": "**静岡県IoT推進ラボ**",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shin488/seminar-training-plan.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shin488/seminar-training-plan/issues"
+  },
+  "homepage": "https://github.com/shin488/seminar-training-plan#readme"
+}
