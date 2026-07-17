@@ -133,46 +133,89 @@ h3 {
 
 .purpose-item {
   text-align: center;
-  padding: 35px 20px;
-  border-radius: 16px;
+  padding: 40px 20px;
+  border-radius: 20px;
   color: white;
-  transition: transform 0.2s;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.purpose-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  transition: transform 0.5s;
 }
 
 .purpose-item:hover {
-  transform: translateY(-4px);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+.purpose-item:hover::before {
+  transform: scale(1.1);
+}
+
+.purpose-item > * {
+  position: relative;
+  z-index: 1;
 }
 
 .purpose-icon {
-  font-size: 40px;
-  margin-bottom: 12px;
+  font-size: 48px;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
 }
 
 .purpose-item h4 {
-  font-size: 26px;
+  font-size: 32px;
   margin-bottom: 10px;
   color: white;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  font-weight: 800;
 }
 
 .purpose-item p {
   font-size: 14px;
   line-height: 1.6;
   opacity: 0.95;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.3);
 }
 
 .purpose-item.ai {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  box-shadow: 0 8px 25px rgba(102,126,234,0.3);
+  background: linear-gradient(135deg, rgba(102,126,234,0.85) 0%, rgba(118,75,162,0.85) 100%);
+  box-shadow: 0 8px 25px rgba(102,126,234,0.4);
+}
+
+.purpose-item.ai::before {
+  background-image: url('images/ai-bg.jpg');
 }
 
 .purpose-item.iot {
-  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
-  box-shadow: 0 8px 25px rgba(17,153,142,0.3);
+  background: linear-gradient(135deg, rgba(17,153,142,0.85) 0%, rgba(56,239,125,0.85) 100%);
+  box-shadow: 0 8px 25px rgba(17,153,142,0.4);
+}
+
+.purpose-item.iot::before {
+  background-image: url('images/iot-bg.jpg');
 }
 
 .purpose-item.dx {
-  background: linear-gradient(135deg, #eb3349 0%, #f45c43 100%);
-  box-shadow: 0 8px 25px rgba(235,51,73,0.3);
+  background: linear-gradient(135deg, rgba(235,51,73,0.85) 0%, rgba(244,92,67,0.85) 100%);
+  box-shadow: 0 8px 25px rgba(235,51,73,0.4);
+}
+
+.purpose-item.dx::before {
+  background-image: url('images/dx-bg.jpg');
 }
 
 /* ===== Content Section ===== */
@@ -782,6 +825,10 @@ footer {
 
   .purpose-grid {
     grid-template-columns: 1fr;
+  }
+
+  .purpose-item {
+    min-height: 180px;
   }
 
   .content-grid {
