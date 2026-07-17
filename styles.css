@@ -303,13 +303,13 @@ h3 {
 
 .purpose-item {
   text-align: center;
-  padding: 50px 25px;
+  padding: 60px 30px;
   border-radius: var(--radius-xl);
   color: white;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
-  min-height: 260px;
+  min-height: 280px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -363,32 +363,20 @@ h3 {
   z-index: 2;
 }
 
-.purpose-icon {
-  font-size: 60px;
-  margin-bottom: 20px;
-  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
-  animation: float 4s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
 .purpose-item h4 {
-  font-size: 42px;
-  margin-bottom: 14px;
+  font-size: 52px;
+  margin-bottom: 16px;
   color: white;
-  text-shadow: 0 3px 12px rgba(0,0,0,0.4), 0 0 40px rgba(255,255,255,0.15);
+  text-shadow: 0 4px 20px rgba(0,0,0,0.5), 0 0 60px rgba(255,255,255,0.2);
   font-weight: 900;
-  letter-spacing: 3px;
+  letter-spacing: 6px;
 }
 
 .purpose-item p {
-  font-size: 15px;
-  line-height: 1.7;
+  font-size: 16px;
+  line-height: 1.8;
   color: white;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  text-shadow: 0 2px 10px rgba(0,0,0,0.6);
   font-weight: 500;
 }
 
@@ -1295,11 +1283,11 @@ tr:hover:not(.total) {
   }
 
   .purpose-item {
-    min-height: 200px;
+    min-height: 220px;
   }
 
   .purpose-item h4 {
-    font-size: 32px;
+    font-size: 40px;
   }
 
   .content-grid {
