@@ -624,7 +624,7 @@ body {
   .section {
     opacity: 1 !important;
     transform: none !important;
-    padding: 14pt 0;
+    padding: 12pt 0;
   }
 
   .section-title {
@@ -639,19 +639,57 @@ body {
 
   .section-desc {
     font-size: 9pt;
-    margin-bottom: 14pt;
+    margin-bottom: 10pt;
   }
 
-  .purpose-grid {
+  /* === 3-column table layout === */
+  .purpose-grid,
+  .card-grid-3,
+  .spot-grid {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    border-spacing: 4pt 0;
+  }
+
+  .purpose-grid > .purpose-card,
+  .card-grid-3 > .card,
+  .spot-grid > .spot {
+    display: table-cell;
+    float: none;
+    vertical-align: top;
+    width: auto;
+    margin: 0;
+  }
+
+  /* === 2-column table layout === */
+  .card-grid-2,
+  .schedule-grid {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    border-spacing: 4pt 0;
+  }
+
+  .card-grid-2 > .card,
+  .schedule-grid > .schedule-day {
+    display: table-cell;
+    float: none;
+    vertical-align: top;
+    width: auto;
+    margin: 0;
+  }
+
+  .card-grid-2 > .card.card-wide,
+  .schedule-grid > .schedule-day.card-wide {
     display: block;
-    overflow: hidden;
+    width: 100%;
+    clear: both;
   }
 
+  /* === Purpose cards === */
   .purpose-card {
-    float: left;
-    width: calc(33.333% - 4pt);
-    margin: 0 2pt;
-    min-height: 80pt;
+    min-height: 72pt;
   }
 
   .purpose-card-bg { display: none; }
@@ -659,105 +697,75 @@ body {
   .purpose-iot { background: var(--iot-color) !important; }
   .purpose-dx { background: var(--dx-color) !important; }
 
-  .purpose-card-content { padding: 12pt; }
-  .purpose-num { font-size: 28pt; top: 6pt; right: 8pt; }
-  .purpose-card h3 { font-size: 16pt; }
-  .purpose-card p { font-size: 7.5pt; }
+  .purpose-card-content { padding: 10pt; }
+  .purpose-num { font-size: 26pt; top: 5pt; right: 6pt; }
+  .purpose-card h3 { font-size: 15pt; }
+  .purpose-card p { font-size: 7pt; }
 
-  .card-grid-2 {
-    display: block;
-    overflow: hidden;
-  }
-  .card-grid-2 > .card {
-    float: left;
-    width: calc(50% - 3pt);
-    margin: 0 1.5pt;
-  }
-  .card-grid-2 > .card.card-wide {
-    float: none;
-    width: 100%;
-    margin: 0;
-  }
-
-  .card-grid-3 {
-    display: block;
-    overflow: hidden;
-  }
-  .card-grid-3 > .card {
-    float: left;
-    width: calc(33.333% - 4pt);
-    margin: 0 2pt;
-  }
-
+  /* === Cards === */
   .card {
     box-shadow: none !important;
     border: 1px solid #d0d0d0;
     transform: none !important;
-    padding: 12pt;
+    padding: 10pt;
   }
 
-  .card h4 { font-size: 9.5pt; margin-bottom: 4pt; }
-  .card p { font-size: 8pt; }
-  .card li { font-size: 8pt; }
+  .card h4 { font-size: 9pt; margin-bottom: 3pt; }
+  .card p { font-size: 7.5pt; }
+  .card li { font-size: 7.5pt; margin-bottom: 2pt; }
+  .card ul { margin-left: 12pt; }
 
-  .card-img img { height: 90pt; }
-  .card-img-content { padding: 10pt; }
+  .card-img img { height: 80pt; }
+  .card-img-content { padding: 8pt; }
 
-  .tag { font-size: 7.5pt; padding: 2pt 7pt; }
-  .tag-row { gap: 4pt; }
+  /* === Tags === */
+  .tag { font-size: 7pt; padding: 2pt 6pt; }
+  .tag-row { gap: 3pt; }
 
-  .flow-item { font-size: 8.5pt; padding: 4pt 10pt; }
-  .flow-arrow { font-size: 10pt; }
+  /* === Flow === */
+  .flow-card { display: table; width: 100%; margin-top: 6pt; }
+  .flow { margin-top: 8pt; }
+  .flow-item { font-size: 8pt; padding: 3pt 8pt; }
+  .flow-arrow { font-size: 9pt; }
 
-  .dx-item { padding: 8pt 12pt; }
-  .dx-num { font-size: 11pt; }
-  .dx-item h4 { font-size: 9pt; }
-  .dx-item p { font-size: 7.5pt; }
+  /* === DX === */
+  .dx-list { border-radius: 4pt; }
+  .dx-item { padding: 6pt 10pt; }
+  .dx-num { font-size: 10pt; min-width: 22pt; }
+  .dx-item h4 { font-size: 8.5pt; }
+  .dx-item p { font-size: 7pt; }
 
-  .schedule-grid {
-    display: block;
-    overflow: hidden;
-  }
-  .schedule-day {
-    float: left;
-    width: calc(50% - 3pt);
-    margin: 0 1.5pt;
-  }
+  /* === Schedule === */
+  .day-badge { padding: 6pt 10pt; font-size: 8pt; }
 
-  .day-badge { padding: 8pt 12pt; font-size: 8.5pt; }
+  .timeline { padding: 6pt 10pt; }
+  .tl-item { padding: 3pt 0; }
+  .tl-time { font-size: 7pt; }
+  .tl-body strong { font-size: 8pt; }
+  .tl-body p { font-size: 6.5pt; }
+  .tl-highlight, .tl-green { padding: 3pt; margin: 1pt -3pt; }
 
-  .timeline { padding: 8pt 12pt; }
-  .tl-item { padding: 5pt 0; }
-  .tl-time { font-size: 7.5pt; }
-  .tl-body strong { font-size: 8.5pt; }
-  .tl-body p { font-size: 7pt; }
-  .tl-highlight, .tl-green { padding: 5pt; margin: 2pt -5pt; }
-
-  .spot-grid {
-    display: block;
-    overflow: hidden;
-  }
-  .spot {
-    float: left;
-    width: calc(33.333% - 4pt);
-    margin: 0 2pt;
-    aspect-ratio: 16/10;
-  }
-
+  /* === Spots === */
+  .spot { aspect-ratio: auto; }
+  .spot img { height: 60pt; }
   .spot img { transition: none; }
-  .spot-info { padding: 8pt; }
-  .spot-info h4 { font-size: 8.5pt; }
-  .spot-tag { font-size: 6.5pt; }
+  .spot-info { padding: 6pt; }
+  .spot-info h4 { font-size: 8pt; }
+  .spot-tag { font-size: 6pt; }
 
-  .info-row p { font-size: 8.5pt; }
-  .transport-item p { font-size: 7.5pt; }
+  /* === Access === */
+  .info-row { margin-bottom: 6pt; }
+  .info-row p { font-size: 8pt; }
+  .transport-item { margin-bottom: 6pt; }
+  .transport-item p { font-size: 7pt; }
 
   .map-wrap { display: none !important; }
-  .map-static { display: block !important; width: 100%; border-radius: 4pt; border: 1px solid #d0d0d0; margin-top: 8pt; }
+  .map-static { display: block !important; width: 100%; border-radius: 3pt; border: 1px solid #d0d0d0; margin-top: 6pt; }
 
-  .budget-table { }
-  .budget-row { padding: 8pt 14pt; font-size: 9pt; }
-  .budget-total { font-size: 9.5pt; }
+  /* === Budget === */
+  .budget-table { border-radius: 4pt; }
+  .budget-row { padding: 6pt 12pt; font-size: 8.5pt; }
+  .budget-total { font-size: 9pt; }
 
   .footer { display: none !important; }
 
