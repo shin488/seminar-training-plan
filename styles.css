@@ -646,7 +646,8 @@ body {
   .purpose-grid,
   .card-grid-3,
   .spot-grid {
-    text-align: justify;
+    text-align: center;
+    font-size: 0;
   }
 
   .purpose-grid > .purpose-card,
@@ -654,24 +655,27 @@ body {
   .spot-grid > .spot {
     display: inline-block;
     vertical-align: top;
-    width: 31%;
-    margin: 0 1%;
+    width: 30%;
+    margin: 0 1.5%;
     text-align: left;
+    font-size: 10pt;
   }
 
   /* === 2-column layout === */
   .card-grid-2,
   .schedule-grid {
-    text-align: justify;
+    text-align: center;
+    font-size: 0;
   }
 
   .card-grid-2 > .card,
   .schedule-grid > .schedule-day {
     display: inline-block;
     vertical-align: top;
-    width: 47%;
-    margin: 0 1.5%;
+    width: 46%;
+    margin: 0 2%;
     text-align: left;
+    font-size: 10pt;
   }
 
   .card-grid-2 > .card.card-wide,
@@ -679,6 +683,7 @@ body {
     display: block;
     width: 100%;
     margin: 0;
+    font-size: 10pt;
   }
 
   /* === Purpose cards === */
@@ -714,13 +719,14 @@ body {
 
   /* === Tags === */
   .tag { font-size: 7pt; padding: 2pt 6pt; }
-  .tag-row { gap: 3pt; }
+  .tag-row { text-align: center; }
+  .tag-row .tag { display: inline-block; margin: 1pt 2pt; }
 
   /* === Flow === */
   .flow-card { width: 100%; margin-top: 6pt; }
-  .flow { margin-top: 8pt; }
-  .flow-item { font-size: 8pt; padding: 3pt 8pt; }
-  .flow-arrow { font-size: 9pt; }
+  .flow { margin-top: 8pt; text-align: center; }
+  .flow-item { display: inline-block; font-size: 8pt; padding: 3pt 8pt; margin: 2pt 1pt; }
+  .flow-arrow { display: inline-block; font-size: 9pt; margin: 0 2pt; }
 
   /* === DX === */
   .dx-list { border-radius: 4pt; }
