@@ -1,9 +1,26 @@
 from weasyprint import HTML
-import os
+from PIL import Image
+import os, io, base64
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 img_dir = script_dir + '/images/'
 pdf_path = os.path.join(script_dir, 'seminar-plan.pdf')
+
+def crop_center(image_path, target_ratio=16/10):
+    img = Image.open(image_path)
+    w, h = img.size
+    current_ratio = w / h
+    if current_ratio > target_ratio:
+        new_w = int(h * target_ratio)
+        left = (w - new_w) // 2
+        img = img.crop((left, 0, left + new_w, h))
+    else:
+        new_h = int(w / target_ratio)
+        top = (h - new_h) // 2
+        img = img.crop((0, top, w, top + new_h))
+    buf = io.BytesIO()
+    img.save(buf, format='JPEG', quality=85)
+    return 'data:image/jpeg;base64,' + base64.b64encode(buf.getvalue()).decode()
 
 CSS = """
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap');
@@ -97,11 +114,14 @@ for num, title, desc in dx_items:
     d = f'<p>{desc}</p>' if desc else ''
     dx_rows += f'<tr><td style="font-size:11pt;font-weight:700;color:#d0d0d0;width:24pt;text-align:right;padding-right:4pt">{num}</td><td><strong>{title}</strong>{d}</td></tr>'
 
+facility_exhibit_img = crop_center(img_dir + 'facility-exhibit.jpg')
+facility_workshop_img = crop_center(img_dir + 'facility-workshop.jpg')
+
 facility_exhibit = f'''<div class="card" style="padding:0;overflow:hidden">
-<img src="{img('facility-exhibit.jpg')}" style="width:100%;height:55pt;object-fit:cover;display:block">
+<img src="{facility_exhibit_img}" style="width:100%;height:55pt;display:block">
 <div style="padding:6pt"><span class="tag">展示体験室</span><h4>最新技術を体験</h4><p>民間企業15社のブースで、プレス加工機の見える化、生産ラインIoT、AI画像検査など最新のIoT技術を体験。</p></div></div>'''
 facility_workshop = f'''<div class="card" style="padding:0;overflow:hidden">
-<img src="{img('facility-workshop.jpg')}" style="width:100%;height:55pt;object-fit:cover;display:block">
+<img src="{facility_workshop_img}" style="width:100%;height:55pt;display:block">
 <div style="padding:6pt"><span class="tag">IoT研修室</span><h4>ワークショップ実習</h4><p>Raspberry Pi + Node-REDを用いたIoT実習やAI活用ビッグデータ解析など。</p></div></div>'''
 facility_tags = '<div class="card"><h4>主な展示内容</h4><div><span class="tag tag-warm">プレス機の稼働状況見える化</span><span class="tag tag-warm">生産ラインの稼働管理</span><span class="tag tag-warm">工作機械の遠隔監視</span><span class="tag tag-warm">AI画像自動監視</span><span class="tag tag-warm">RFID部品管理</span><span class="tag tag-warm">LPWAセンサーデバイス</span><span class="tag tag-warm">電動サーボプレスIoT化</span><span class="tag tag-warm">エネルギー消費量の見える化</span></div></div>'
 
@@ -165,8 +185,9 @@ outcomes_dx = '''<div class="card border-top-dx"><h4 style="color:#e11d48">DX</h
 <li>自社の課題を明確化する力が身につく</li></ul></div>'''
 
 def spot_cell(img_name, name, dist):
+    src = crop_center(img_dir + img_name)
     return f'''<td style="text-align:center;padding:2pt">
-<img src="{img(img_name)}" class="spot-img" style="height:45pt">
+<img src="{src}" style="width:100%;height:42pt;border-radius:4pt;display:block">
 <div class="spot-dist">{dist}</div>
 <div class="spot-name">{name}</div></td>'''
 
