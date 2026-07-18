@@ -625,8 +625,9 @@ body {
     opacity: 1 !important;
     transform: none !important;
     padding: 12pt 0;
-    overflow: hidden;
   }
+
+  .clearfix { clear: both; height: 0; line-height: 0; font-size: 0; }
 
   .section-title {
     font-size: 14pt;
