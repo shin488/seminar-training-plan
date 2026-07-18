@@ -186,10 +186,10 @@ outcomes_dx = '''<div class="card border-top-dx"><h4 style="color:#e11d48">DX</h
 
 def spot_cell(img_name, name, dist):
     src = crop_center(img_dir + img_name)
-    return f'''<td style="text-align:center;padding:2pt">
+    return f'''<div style="text-align:center;padding:2pt">
 <img src="{src}" style="width:100%;height:42pt;border-radius:4pt;display:block">
 <div class="spot-dist">{dist}</div>
-<div class="spot-name">{name}</div></td>'''
+<div class="spot-name">{name}</div></div>'''
 
 spots_row1 = row_3cols(
     spot_cell('spot-yusui.jpg', '牧ヶ谷湧水公園', '徒歩5〜10分'),
