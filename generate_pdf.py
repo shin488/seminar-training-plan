@@ -1,4 +1,4 @@
-from weasyprint import HTML, CSS
+from weasyprint import HTML
 import os
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -17,7 +17,6 @@ body_start = full_html.find('<body>') + 6
 body_end = full_html.find('</body>')
 body_content = full_html[body_start:body_end]
 
-# Find the style tag content (Google Fonts link won't work in WeasyPrint, so we embed fonts via CSS)
 html_content = f'''<!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -32,7 +31,8 @@ html_content = f'''<!DOCTYPE html>
 </body>
 </html>'''
 
-HTML(string=html_content).write_pdf(
+# base_url lets WeasyPrint resolve relative paths like images/foo.jpg
+HTML(string=html_content, base_url=script_dir + '/').write_pdf(
     pdf_path,
     presentational_hints=True,
 )
