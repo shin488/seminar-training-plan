@@ -625,6 +625,7 @@ body {
     opacity: 1 !important;
     transform: none !important;
     padding: 12pt 0;
+    overflow: hidden;
   }
 
   .section-title {
@@ -646,44 +647,35 @@ body {
   .purpose-grid,
   .card-grid-3,
   .spot-grid {
-    text-align: center;
-    font-size: 0;
+    overflow: hidden;
   }
 
   .purpose-grid > .purpose-card,
   .card-grid-3 > .card,
   .spot-grid > .spot {
-    display: inline-block;
-    vertical-align: top;
+    float: left;
     width: 30%;
     margin: 0 1.5%;
-    text-align: left;
-    font-size: 10pt;
   }
 
   /* === 2-column layout === */
   .card-grid-2,
   .schedule-grid {
-    text-align: center;
-    font-size: 0;
+    overflow: hidden;
   }
 
   .card-grid-2 > .card,
   .schedule-grid > .schedule-day {
-    display: inline-block;
-    vertical-align: top;
+    float: left;
     width: 46%;
     margin: 0 2%;
-    text-align: left;
-    font-size: 10pt;
   }
 
   .card-grid-2 > .card.card-wide,
   .schedule-grid > .schedule-day.card-wide {
-    display: block;
+    float: none;
     width: 100%;
     margin: 0;
-    font-size: 10pt;
   }
 
   /* === Purpose cards === */
@@ -718,15 +710,14 @@ body {
   .card-img-content { padding: 8pt; }
 
   /* === Tags === */
-  .tag { font-size: 7pt; padding: 2pt 6pt; }
-  .tag-row { text-align: center; }
-  .tag-row .tag { display: inline-block; margin: 1pt 2pt; }
+  .tag { font-size: 7pt; padding: 2pt 6pt; float: left; margin: 1pt 2pt; }
+  .tag-row { overflow: hidden; }
 
   /* === Flow === */
   .flow-card { width: 100%; margin-top: 6pt; }
-  .flow { margin-top: 8pt; text-align: center; }
-  .flow-item { display: inline-block; font-size: 8pt; padding: 3pt 8pt; margin: 2pt 1pt; }
-  .flow-arrow { display: inline-block; font-size: 9pt; margin: 0 2pt; }
+  .flow { margin-top: 8pt; overflow: hidden; text-align: center; }
+  .flow-item { float: left; font-size: 8pt; padding: 3pt 8pt; margin: 2pt 3pt; }
+  .flow-arrow { float: left; font-size: 9pt; margin: 2pt 0; }
 
   /* === DX === */
   .dx-list { border-radius: 4pt; }
