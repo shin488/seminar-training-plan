@@ -576,6 +576,9 @@ body {
   border-top: 1px solid var(--border);
 }
 
+/* ===== Map static (PDF only) ===== */
+.map-static { display: none; }
+
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
   .hero { min-height: 65vh; padding: 48px 20px; }
@@ -640,12 +643,15 @@ body {
   }
 
   .purpose-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 6pt;
+    display: block;
+    overflow: hidden;
   }
 
   .purpose-card {
-    min-height: 85pt;
+    float: left;
+    width: calc(33.333% - 4pt);
+    margin: 0 2pt;
+    min-height: 80pt;
   }
 
   .purpose-card-bg { display: none; }
@@ -658,8 +664,29 @@ body {
   .purpose-card h3 { font-size: 16pt; }
   .purpose-card p { font-size: 7.5pt; }
 
-  .card-grid-2, .card-grid-3 {
-    gap: 6pt;
+  .card-grid-2 {
+    display: block;
+    overflow: hidden;
+  }
+  .card-grid-2 > .card {
+    float: left;
+    width: calc(50% - 3pt);
+    margin: 0 1.5pt;
+  }
+  .card-grid-2 > .card.card-wide {
+    float: none;
+    width: 100%;
+    margin: 0;
+  }
+
+  .card-grid-3 {
+    display: block;
+    overflow: hidden;
+  }
+  .card-grid-3 > .card {
+    float: left;
+    width: calc(33.333% - 4pt);
+    margin: 0 2pt;
   }
 
   .card {
@@ -687,7 +714,15 @@ body {
   .dx-item h4 { font-size: 9pt; }
   .dx-item p { font-size: 7.5pt; }
 
-  .schedule-grid { gap: 6pt; }
+  .schedule-grid {
+    display: block;
+    overflow: hidden;
+  }
+  .schedule-day {
+    float: left;
+    width: calc(50% - 3pt);
+    margin: 0 1.5pt;
+  }
 
   .day-badge { padding: 8pt 12pt; font-size: 8.5pt; }
 
@@ -699,11 +734,13 @@ body {
   .tl-highlight, .tl-green { padding: 5pt; margin: 2pt -5pt; }
 
   .spot-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 6pt;
+    display: block;
+    overflow: hidden;
   }
-
   .spot {
+    float: left;
+    width: calc(33.333% - 4pt);
+    margin: 0 2pt;
     aspect-ratio: 16/10;
   }
 
@@ -716,6 +753,7 @@ body {
   .transport-item p { font-size: 7.5pt; }
 
   .map-wrap { display: none !important; }
+  .map-static { display: block !important; width: 100%; border-radius: 4pt; border: 1px solid #d0d0d0; margin-top: 8pt; }
 
   .budget-table { }
   .budget-row { padding: 8pt 14pt; font-size: 9pt; }
